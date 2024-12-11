@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: yellow;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        float: right;
+      }
+      #box1 {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Block = Satırı tamamen kaplar, boyutlamaya izin verir -->
+    <!-- İnline = İçerik kadar yer kaplar, boyutlamaya izin vermez -->
+    <!-- İnline-block = İçerik kadar yer kaplar, boyutlamaya izin verir -->
+    <div id="container" class="clearfix">
+      <div class="box" id="box1">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio est iusto
+      doloremque numquam! Fugiat architecto magnam consectetur iste, tempore
+      quibusdam.
+    </p>
+  </body>
+</html>
